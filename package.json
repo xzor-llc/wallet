@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "npm run build:esbuild && npm run build:tailwind",
 		"build:esbuild": "esbuild src/main.tsx --bundle --minify --sourcemap --outfile=public/main.js",
-		"build:tailwind": "npx tailwindcss -i ./src/main.css -o ./public/main.css",
+		"build:tailwind": "npx tailwindcss -i ./src/main.css -o ./public/main.css --minify",
 		"watch": "concurrently \"npm run watch:esbuild\" \"npm run watch:tailwind",
 		"watch:esbuild": "esbuild src/main.tsx --bundle --watch --outfile=public/main.js",
 		"watch:tailwind": "npx tailwindcss -i ./src/main.css -o ./public/main.css --watch"
